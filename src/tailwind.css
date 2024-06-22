@@ -2,8 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 640px) {
-  .container {
-    @apply max-w-1/3;
-  }
-}
