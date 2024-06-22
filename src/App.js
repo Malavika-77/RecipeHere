@@ -75,10 +75,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ backgroundImage: `url(${require('./Contact.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {!showResults && (
         <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center mb-4">FlavorFusion Recipe Search</h1>
+          <h1 className="text-5xl text-white font-bold text-center mb-8">FlavorFusion Recipe Search</h1>
           <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
             <input
               type="text"
@@ -95,8 +95,8 @@ function App() {
       )}
       {showResults && (
         <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center mb-4">𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
-          <img src={delicious} alt="Delicious" className="mb-4" />
+          <h1 className="text-5xl text-white font-bold text-center mb-8">𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
+          <img src={delicious} alt="Delicious" className="mb-8" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
             {recipes.map((recipe) => (
               <div
@@ -111,7 +111,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="mt-4 bg-white p-4 rounded-md shadow-md w-full h-auto text-center">
+          <div className="mt-8 bg-white p-4 rounded-md shadow-md w-full h-auto text-center">
             <p className="text-lg text-blue-500 font-bold">Thank you for using FlavorFusion!</p>
           </div>
         </div>
