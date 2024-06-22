@@ -86,10 +86,9 @@ function App() {
           placeholder="Search for recipes..."
           value={query}
           onChange={handleChange}
-          className="w-full p-2 border rounded-md mb-4" style={{ width: "540px", top: "500px", left: "520px", borderRadius: "20px" }}
-
+className="w-full p-2 border rounded-md mb-2"
         />
-        <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2"style={{ width: "540px", top: "550px", left: "520px", borderRadius: "20px" }}>
+        <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2 mb-1">
           Search
         </button>
       </form>
