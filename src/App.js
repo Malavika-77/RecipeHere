@@ -78,7 +78,7 @@ function App() {
   return (
    <div className="min-h-screen flex flex-col">
   {!showResults && (
-    <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${require('./Contact.png')})` }}>
+    <div className="container w-full mx-auto p-4 min-h-screen flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${require('./Contact.png')})` }}>
       <h1 className="text-5xl text-white font-bold text-center mb-8">FlavorFusion Recipe Search</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
         <input
