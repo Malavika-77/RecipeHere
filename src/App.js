@@ -77,49 +77,42 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {!showResults && (
-        <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center" style={{ backgroundImage: `url(${require('./Contact.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <h1 className="text-5xl text-white font-bold text-center" style={{ width: "540px", top: "5px", left: "540px", position: "absolute", borderRadius: "20px" }}>FlavorFusion Recipe Search</h1>
-          <form onSubmit={handleSubmit} className="flex flex-col items-center mb-8 w-full md:w-1/2">
+        <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center mb-4">FlavorFusion Recipe Search</h1>
+          <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
             <input
               type="text"
               placeholder="Search for recipes..."
               value={query}
               onChange={handleChange}
               className="w-full p-2 border rounded-md mb-4"
-              style={{ width: "540px", top: "461px", left: "520px", position: "absolute", borderRadius: "20px" }}
             />
-            <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2" style={{ width: "540px", top: "540px", left: "520px", position: "absolute", borderRadius: "20px" }}>
+            <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2">
               Search
             </button>
           </form>
         </div>
       )}
       {showResults && (
-        <div className="container mx-auto p-4 flex-grow flex flex-col items-center" style={{ backgroundImage: `url(${require('./recipe.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <h1 style={{ fontSize: "100px", position: "relative", color: "white", right: "600px", width: "100px" }}>𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
-          <br />
-          <br />
-          <img src={delicious}style={{
-            top:"100px",
-            left:"600px"
-          }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full px-4">
+        <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center mb-4">𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
+          <img src={delicious} alt="Delicious" className="mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
             {recipes.map((recipe) => (
               <div
                 key={recipe.id}
                 className="bg-white p-4 rounded-md shadow-md cursor-pointer transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-100 hover:text-blue"
-                style={{ width: '250px', height: '300px' }}
                 onClick={() => handleRecipeClick(recipe.id)}
               >
-                <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
-                <img src={recipe.image} alt={recipe.title} className="w-full h-32 mb-2 object-cover" />
-                <p>Ready in {recipe.readyInMinutes} minutes</p>
+                <h2 className="text-lg font-semibold mb-2">{recipe.title}</h2>
+                <img src={recipe.image} alt={recipe.title} className="w-full h-40 mb-2 object-cover" />
+                <p className="mb-2">Ready in {recipe.readyInMinutes} minutes</p>
                 {recipe.spoonacularScore ? renderRating(recipe.spoonacularScore) : <p>No rating available</p>}
               </div>
             ))}
           </div>
-          <div className="mt-4 bg-white p-4 rounded-md shadow-md w-full h-auto text-center"style={{ backgroundImage: `url(${require('./Delicious.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <p className="text-xl text-white font-bold text-center" >Thank you for using FlavorFusion!</p>
+          <div className="mt-4 bg-white p-4 rounded-md shadow-md w-full h-auto text-center">
+            <p className="text-lg text-blue-500 font-bold">Thank you for using FlavorFusion!</p>
           </div>
         </div>
       )}
