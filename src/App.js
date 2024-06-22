@@ -99,7 +99,7 @@ function App() {
 
 
       {showResults && (
-        <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
+        <div className="container mx-auto p-4 flex-grow flex flex-col items-center" style={{ backgroundImage: `url(${require('./recipe.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <h1 className="text-5xl text-white font-bold text-center mb-8">𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
           <img src={delicious} alt="Delicious" className="mb-8" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
