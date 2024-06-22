@@ -79,16 +79,17 @@ function App() {
    <div className="min-h-screen flex flex-col">
   {!showResults && (
     <div className="container w-full mx-auto p-4 min-h-screen flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${require('./Contact.png')})` }}>
-      <h1 className="text-5xl text-white font-bold text-center mb-8">FlavorFusion Recipe Search</h1>
+          <h1 className="text-5xl text-white font-bold text-center" style={{ width: "540px", top: "5px", left: "540px", position: "absolute", borderRadius: "20px" }}>FlavorFusion Recipe Search</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
         <input
           type="text"
           placeholder="Search for recipes..."
           value={query}
           onChange={handleChange}
-          className="w-full p-2 border rounded-md mb-4"
+          className="w-full p-2 border rounded-md mb-4" style={{ width: "540px", top: "461px", left: "520px", position: "absolute", borderRadius: "20px" }}
+
         />
-        <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2">
+        <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2"style={{ width: "540px", top: "540px", left: "520px", position: "absolute", borderRadius: "20px" }}>
           Search
         </button>
       </form>
