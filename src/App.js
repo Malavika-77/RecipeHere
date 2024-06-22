@@ -93,7 +93,7 @@ function App() {
       </form>
     </div>
   )}
-</div>
+
 
       {showResults && (
         <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
