@@ -108,7 +108,7 @@ function App() {
               <div
                 key={recipe.id}
                 className="bg-white p-4 rounded-md shadow-md cursor-pointer transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-100 hover:text-blue"
-                style={{ width: '250px', height: '280px' }}
+                style={{ width: '250px', height: '300px' }}
                 onClick={() => handleRecipeClick(recipe.id)}
               >
                 <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
