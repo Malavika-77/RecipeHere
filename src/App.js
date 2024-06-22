@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import delicious from './Delicious.png';
+import './style.css';
 
 function App() {
   const [query, setQuery] = useState('');
