@@ -75,24 +75,26 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundImage: `url(${require('./Contact.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {!showResults && (
-        <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center">
-          <h1 className="text-5xl text-white font-bold text-center mb-8">FlavorFusion Recipe Search</h1>
-          <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
-            <input
-              type="text"
-              placeholder="Search for recipes..."
-              value={query}
-              onChange={handleChange}
-              className="w-full p-2 border rounded-md mb-4"
-            />
-            <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2">
-              Search
-            </button>
-          </form>
-        </div>
-      )}
+   <div className="min-h-screen flex flex-col">
+  {!showResults && (
+    <div className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center" style={{ backgroundImage: `url(${require('./Contact.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <h1 className="text-5xl text-white font-bold text-center mb-8">FlavorFusion Recipe Search</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center w-full max-w-md">
+        <input
+          type="text"
+          placeholder="Search for recipes..."
+          value={query}
+          onChange={handleChange}
+          className="w-full p-2 border rounded-md mb-4"
+        />
+        <button type="submit" className="w-full bg-blue-500 text-white rounded-md py-2">
+          Search
+        </button>
+      </form>
+    </div>
+  )}
+</div>
+
       {showResults && (
         <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
           <h1 className="text-5xl text-white font-bold text-center mb-8">𝕿𝖆𝖘𝖙𝖊 𝖙𝖍𝖊 𝖒𝖆𝖌𝖎𝖈</h1>
@@ -111,7 +113,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="mt-8 bg-white p-4 rounded-md shadow-md w-full h-auto text-center">
+          <div className="mt-8 bg-white p-4 rounded-md shadow-md w-full h-auto text-center"style={{ backgroundImage: `url(${require('./Delicious.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <p className="text-lg text-blue-500 font-bold">Thank you for using FlavorFusion!</p>
           </div>
         </div>
