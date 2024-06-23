@@ -76,7 +76,7 @@ function App() {
   };
 
   return (
-   <div className="container mx-auto p-4 flex-grow flex flex-col">
+   <div className="min-h-screen flex flex-col">
   {!showResults && (
     <div className="container w-full mx-auto p-4 min-h-screen flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${require('./Contact.png')})` }}>
           <h1 className="text-5xl text-white font-bold text-center" style={{ width: "540px", top: "5px", left: "540px", position: "absolute", borderRadius: "20px" }}>FlavorFusion Recipe Search</h1>
